@@ -1,8 +1,7 @@
-package com.examenT2.model;
+package com.examenT2.LP2_T2_Cossio_Fabrizio_1.model;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -30,15 +29,14 @@ public class ProveedorCossioFabrizio {
     @Column(name = "id_proveedor")
     private Integer idProveedor;
 
-    @Column(name = "ruc", length = 11)
+    @Column(name = "ruc")
     private String ruc;
 
     @Column(name = "razon_social")
     private String razonSocial;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "fecha_registro")
-    private LocalDate fechaRegistro;
+    private LocalDateTime fechaRegistro;
 
     @Column(name = "direccion")
     private String direccion;

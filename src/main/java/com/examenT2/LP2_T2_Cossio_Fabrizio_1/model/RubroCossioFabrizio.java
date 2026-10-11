@@ -1,4 +1,4 @@
-package com.examenT2.model;
+package com.examenT2.LP2_T2_Cossio_Fabrizio_1.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

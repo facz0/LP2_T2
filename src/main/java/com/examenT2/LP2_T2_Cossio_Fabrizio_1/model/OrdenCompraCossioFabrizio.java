@@ -1,4 +1,4 @@
-package com.examenT2.model;
+package com.examenT2.LP2_T2_Cossio_Fabrizio_1.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -37,17 +37,27 @@ public class OrdenCompraCossioFabrizio {
     @JoinColumn(name = "id_proveedor")
     private ProveedorCossioFabrizio proveedor;
 
-    @Column(name = "monto", precision = 10, scale = 2)
+    @Column(name = "monto")
     private BigDecimal monto;
 
     @Column(name = "direccion_entrega")
     private String direccionEntrega;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "fecha_entrega")
     private LocalDate fechaEntrega;
 
-    @Column(name = "estado", length = 1)
-    private String estado = "P";
+    @Column(name = "estado")
+    private String estado;
+    
+    public String getEstadoDescripcion() {
+        if ("P".equals(estado)) {
+            return "Pendiente";
+        } else if ("C".equals(estado)) {
+            return "Completado";
+        } else if ("A".equals(estado)) {
+            return "Anulado";
+        }
+        return "Desconocido";
+    }
 
 }
